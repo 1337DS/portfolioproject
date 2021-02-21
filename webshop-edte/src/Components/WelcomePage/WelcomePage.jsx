@@ -5,61 +5,34 @@ class WelcomePage extends Component {
         return (
             
             <html>
+                
                 <head>
-                    <meta charset="UTF-8"></meta>
-                    <style type="text/css"></style>
-
-                    <title>Hotel Babeldaob | Palau</title>
+                    <title>Rares für Bares | Webshop</title>
+                    <meta charset="utf-8" />
+                    
                 </head>
 
                 <body>
-                    <main>
+                    <div>
+                        <header>
+                            Das ist der Header
+                        </header>
                     
+                        <aside>
+                            Shopping Categories
+                        </aside>
+                        <main>
+                            <ul>
+                                <li>Product</li>
+                                <li>product 2</li>
+                                <li>Product 3</li>
 
-                    <div id="col-right">
-                        <h1> Wilkommen in Babeldaob, Palau </h1>		
-
-                    
-                        <p id="block1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-
-                        <h2>Zimmer</h2>
-                        <p>	
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-
-                        <h2 class="h2MitLinie">Lage</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        
-                        <h2 class="h2MitLinie"> Restaurant</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                                
+                            </ul>
+                        </main>
+                        <footer>All rights reserved 2021</footer>
 
                     </div>
-
-                    <aside>
-                            <h3>Testspalte Rechts</h3>
-                    </aside>
-
-                </main>
-                    
-                
                 </body>
 
             </html>
