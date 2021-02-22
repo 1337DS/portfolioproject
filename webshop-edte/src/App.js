@@ -3,13 +3,14 @@ import './App.css';
 import React, { Component } from 'react'
 import WelcomePage from './Components/WelcomePage/WelcomePage';
 import NavBar from './Components/NavBar/NavBar';
-import data from './data'
+import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
+import data from './data';
 import { Route, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
 
-    <BrowserRouter>
+    <Router>
 
     <div className="grid-container">
 
@@ -27,23 +28,10 @@ function App() {
 
       <main className="main">
         <div className="content">
-          <Rou
-          <Route path="/" exact={true} component={HomeScreen}/>
-          <ul className="products">
-            {
-              data.products.map(product =>             
-              <li>
-                <div className="product">
-                  <img className="product-image" src={product.image} alt="product"></img>
-                  <div className="product-name">
-                    <a href="Jetpack.html">{product.name}</a>
-                  </div>
-                  <div className="product-description">{product.description}</div>
-                  <div className="product-price">{product.price}</div>
-                </div>
-              </li>)
-            }
-          </ul>
+          <Route path="/products/:id" component={ShoppingCart}/>
+          <Route path="/" exact={true} component={WelcomePage}/>
+        
+          
 
 
         </div>
@@ -52,7 +40,7 @@ function App() {
       <footer className="footer">All rights reserved &#169; 2021</footer>
     </div>
 
-    </BrowserRouter>
+    </Router>
   );
 }
 
