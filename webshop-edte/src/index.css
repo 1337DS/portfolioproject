@@ -11,3 +11,118 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html{
+  font-size: 62.5%; /* 16px * 62.5 =10px = 1rem */
+  box-sizing: border-box;
+}
+body{
+  font: 1.6rem Helvetica;
+  height: 100vh;
+  margin: 0;
+}
+
+.grid-container{ 
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;   
+}
+
+.header{
+  grid-area: header;
+  background-color: #801100;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.brand{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-self: center;
+}
+.header-link a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.header-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: center;
+}
+   
+.main{
+  grid-area: main;
+  }
+.footer{
+  grid-area: footer;
+  }
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  color: #801100;
+}
+
+/* Startseite */
+
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.products li {
+  list-style-type: none;
+  padding: 0;
+  flex: 0 1 34rem;
+  margin: 1rem; 
+  height: 50rem;
+  border-bottom: .1rem #801100 solid;
+}
+
+.product-name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.product-brand{
+  font-size: 1.2rem;
+  color: #808080;
+
+}
+
+.product-image{
+  max-width: 34rem;
+  max-height: 34rem;
+}
+
+.product-price{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;    
+}
+
+.product-name a{
+  font-size: 2rem;
+  color: #5c0f03;
+}
