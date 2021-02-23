@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'
 import WelcomePage from './Components/WelcomePage/WelcomePage';
-import NavBar from './Components/NavBar/NavBar';
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
+import ProductPage from './Components/ProductPage/ProductPage';
 import data from './data';
 import { Route, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom';
 
@@ -28,8 +28,9 @@ function App() {
 
       <main className="main">
         <div className="content">
-          <Route path="/products/:id" component={ShoppingCart}/>
           <Route path="/" exact={true} component={WelcomePage}/>
+          <Route path="/products/:id" component={ProductPage}/>
+          <Route path="/checkout" component={ShoppingCart}/>
         
           
 
