@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import WelcomePage from './Components/WelcomePage/WelcomePage';
 import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
 import ProductPage from './Components/ProductPage/ProductPage';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import data from './data';
 import { Route, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom';
 
@@ -30,7 +31,8 @@ function App() {
         <div className="content">
           <Route path="/" exact={true} component={WelcomePage}/>
           <Route path="/products/:id" component={ProductPage}/>
-          <Route path="/checkout" component={ShoppingCart}/>
+          <Route path="/cart" component={ShoppingCart}/>
+          <Route path="/checkout" component={CheckoutPage}/>
         
           
 

@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 
-class ShoppingCart extends Component {
-    render() {
-        return (
-            <div>
-                 This is Checkout Page
-                
+function CheckoutPage(props) {
+    return <div>
+                This will be checkout Page
             </div>
-        );
-    }
 }
-
-export default ShoppingCart;
+export default CheckoutPage;
