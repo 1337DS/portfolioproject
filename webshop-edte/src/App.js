@@ -6,7 +6,7 @@ import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
 import ProductPage from './Components/ProductPage/ProductPage';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import data from './data';
-import { Route, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router, BrowserRouter, Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
       <div className="header">
 
         <div className="brand">
-          Rares für Bares
-          </div>
+          <Link to="/">Rares für Bares</Link>
+        </div>
 
         <div className="header-link">
-          <a href="cart.html">Shopping Cart</a>
+          <Link to="/cart">Shopping Cart</Link>
         </div>
 
       </div>

@@ -1,6 +1,7 @@
 export default {
     products:[
         {
+        _id:'123',
         name: 'Secuan Sauce',
         description: 'Sehr Lecker!',
         image: '/images/sauce.jpeg',
@@ -8,6 +9,7 @@ export default {
         },
 
         {
+        _id:'124',
         name: 'Kein Flammenwerfer',
         description: 'Sehr effektives Gerät zum Grillen von Burger',
         image: '/images/NAF.jpg',
@@ -15,6 +17,7 @@ export default {
         },
 
         {
+        _id:'125',
         name: 'Secuan Sauce',
         description: 'Sehr Lecker!',
         image: '/images/sauce.jpeg',
