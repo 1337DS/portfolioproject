@@ -129,3 +129,23 @@ a:hover{
   font-size: 2rem;
   color: #5c0f03;
 }
+/*Product Details*/
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.details-imgage{
+  flex: 2 1 60rem;
+}
+.details-image img{
+  max-width: 60rem;
+  widows:  100%;
+}
+.details-info{
+  flex: 1 1 30rem;
+}
+.details-action{
+  flex: 1 1 30rem;
+}

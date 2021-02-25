@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../../data';
+import {Link} from 'react-router-dom';
 
 
 function ProductPage(props) {
