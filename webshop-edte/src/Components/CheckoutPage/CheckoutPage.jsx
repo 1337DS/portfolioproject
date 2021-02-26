@@ -1,62 +1,72 @@
 import React, { Component } from 'react';
 
 function CheckoutPage(props) {
-    return <div>
-                <form id="kontaktformular" action="https://www.edte-webshop.de/>mail.php" method="POST|GET">
+    return <div className='checkout'>
+                <h1>Einkauf Abschließen</h1>
+                <form className="kontaktformular" action="https://www.edte-webshop.de/>mail.php" method="POST|GET">
+                        <li><label>E-Mail Adresse</label>
+                        <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Nachname eingeben"/>
+                        <br/></li>
 
-                    <label>E-Mail Adresse</label>
-                    <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Nachname eingeben"/>
-                    <br/>
-                    <label>Vorname</label>
-                    <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Vornamen eingeben"/>
-                    <label>Nachname</label>
-                    <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Nachname eingeben"/>
-                    <br/>
-                    <label>Anrede</label>
-                    <select id="anrede" name="anrede">
-                    <option value="Herr">Herr</option>
-                    <option value="Frau">Frau</option>
-                    <option value="Firma">Firma</option>
-                    </select>
-                    <label>Straße und Hausnr.</label>
-                    <input type="text" id="street" name="formularansprechfeld" value= "" placeholder="Bitte Straße und Hausnummer eingeben"/>
-                    <br/>
-                    <label>Postleitzahl</label>
-                    <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte Postleitzahl eingeben"/>
-                    <br/>
+                        <li><label>Vorname</label>
+                        <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Vornamen eingeben"/>
+                        </li>
 
-                    <label>Ort</label>
-                    <input type="text" id="city" name="formularansprechfeld" value= "" placeholder="Bitte Ort eingeben"/>
-                    <br/>
+                        <li><label>Nachname</label>
+                        <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Nachname eingeben"/>
+                        <br/></li>
 
-                    <label>Lieferhinweise</label>
-                    <textarea id="lieferhinweise" name="lieferhinweise" placeholder="Lieferhinweis">
-                    </textarea>
+                        <li> <label>Anrede</label>
+                        <select id="anrede" name="anrede">
+                        <option value="Herr">Herr</option>
+                        <option value="Frau">Frau</option>
+                        <option value="Firma">Firma</option>
+                        </select></li>
 
-                    <br/>
-                    <label>Kontoinhaber</label>
-                    <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte Kontoinhaber angeben"/>
-                    <br/>
+                        <li><label>Straße und Hausnr.</label>
+                        <input type="text" id="street" name="formularansprechfeld" value= "" placeholder="Bitte Straße und Hausnummer eingeben"/>
+                        <br/></li>
 
-                    <br/>
-                    <label>IBAN</label>
-                    <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte IBAN eingeben"/>
-                    <br/>
+                        <li><label>Postleitzahl</label>
+                        <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte Postleitzahl eingeben"/>
+                        <br/></li>
 
-                    <br/>
-                    <label>IBAN</label>
-                    <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte IBAN eingeben"/>
-                    <br/>
+                        <li><label>Ort</label>
+                        <input type="text" id="city" name="formularansprechfeld" value= "" placeholder="Bitte Ort eingeben"/>
+                        <br/></li>
 
-                    <label>AGB gelesen und verstanden</label>
-                    <input type="checkbox" id="AGB" name="AGB" value="AGB"/>
-                    <br/> 
+                        <li><label>Lieferhinweise</label>
+                        <textarea id="lieferhinweise" name="lieferhinweise" placeholder="Lieferhinweis">
+                        </textarea></li>
 
-                                        
-                    <button type="submit">
+                        <li><br/>
+                        <label>Kontoinhaber</label>
+                        <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte Kontoinhaber angeben"/>
+                        <br/></li>
+
+                        <li><br/>
+                        <label>IBAN</label>
+                        <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte IBAN eingeben"/>
+                        <br/></li>
+
+                        <li><br/>
+                        <label>IBAN</label>
+                        <input type="text" id="zipcode" name="formularansprechfeld" value= "" placeholder="Bitte IBAN eingeben"/>
+                        <br/></li>
+
+
+                        <li> <label>AGB gelesen und verstanden</label>
+                        <input type="checkbox" id="AGB" name="AGB" value="AGB"/>
+                        <br/> 
+
+                        </li>
+                        <li> <button type="submit">
                         Kostenpflichtig bestellen
-                    </button>
-
+                        </button>
+                                
+                        </li>
+                        
+                        
 					</form>
             </div>
 }

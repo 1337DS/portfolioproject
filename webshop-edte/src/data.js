@@ -24,7 +24,7 @@ export default {
             description: 'Harrier Kampfflugzeug. Für den zivilen Gebrauch umgebaut. Gesponsert von Pepsico Inc.',
             image: '/images/harrier.jpg',
             price: '7.000.000 Pepsi Points',
-            europreis: 7000000,
+            europrice: 7000000,
         },
         {
             _id:'127',
