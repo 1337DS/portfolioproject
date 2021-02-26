@@ -1,11 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, useState} from 'react';
 import data from '../../data';
-import {Link} from 'react-router-dom';
-
+import {Link, Route} from 'react-router-dom';
 
 function ProductPage(props) {
-            const product = data.products.find(x => x._id === props.match.params.id)
-    return <div>
+    const product = data.products.find(x => x._id === props.match.params.id)
+    const [count, setCount] = useState(0);
+    const [cart, setCart] = useState(0);
+
+    // React.useEffect(() => {
+    //                         const data = localStorage.getItem('Warenkorb');
+    //                         if (data) {
+    //                         setCount(JSON.parse(data));
+    //                         }
+    //                         }, [])
+
+    function SaveToCart(){localStorage.setItem("Warenkorb",JSON.stringify([props.match.params.id, count]))
+
+    }
+    
+
+      return (
+        <div>
                 <div className="back-to-results">
                     <Link to="/">Zurück zur Produktseite</Link>
                 </div>
@@ -40,21 +55,19 @@ function ProductPage(props) {
                                 Status: {product.status}
                             </li>
                             <li>
-                                Anzahl:<select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
+                                Anzahl:<h3>{count}</h3>
+                                <button className="button" onClick={() => setCount(count + 1)}>+</button>
+                                <button className="button" onClick={() => setCount(count - 1)}>-</button>
                             </li>
                             <li>
-                                <button className="button">Zum Warenkorb hinzufügen</button>
+                                <button className="button" onClick={SaveToCart}>Zum Warenkorb hinzufügen</button>
+
                             </li>
                         </ul>
                     </div>
                 </div>
                 
             </div>
-}
-export default ProductPage; 
-
+      )
+    }
+export default ProductPage;

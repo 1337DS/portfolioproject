@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, useState, setState, count, sortiment } from 'react';
+import ProductPage from '../ProductPage/ProductPage copy';
 
 function CheckoutPage(props) {
+    
     return <div className='checkout'>
                 <h1>Einkauf Abschließen</h1>
+                <h1>{sortiment}</h1>
                 <form className="kontaktformular" action="https://www.edte-webshop.de/>mail.php" method="POST|GET">
                         <li><label>E-Mail Adresse</label>
                         <input type="text" id="vorname" name="formularansprechfeld" value= "" placeholder="Bitte Nachname eingeben"/>

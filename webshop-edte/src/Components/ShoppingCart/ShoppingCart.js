@@ -1,8 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, setCount, count } from 'react';
 
-function ShoppingCart(props) {
-    return <div>
-                Here will be the Shopping cart
-            </div>
-}
-export default ShoppingCart;
+
+class ShoppingCart extends React.Component {
+
+    render() {
+          
+
+      return <h1>Items in Shopping Cart: {this.count}</h1>;
+      
+      
+    }
+  }
+
+
+  export default  ShoppingCart;

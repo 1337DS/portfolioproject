@@ -12,7 +12,7 @@ export default {
         {
             _id:'124',
             name: 'Kein Flammenwerfer',
-            description: 'Sehr effektives Gerät zum... dekorieren',
+            description: 'Sehr effektives Gerät... als Deko',
             image: '/images/NAF.jpg',
             price: '500$',
             europrice: 500,
