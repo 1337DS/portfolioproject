@@ -16,13 +16,14 @@ function App() {
     <div className="grid-container">
 
       <div className="header">
-
+        <img className="brand-image" src='images/rares.jpg'></img>
         <div className="brand">
+          
           <Link to="/">Rares für Bares</Link>
         </div>
 
         <div className="header-link">
-          <Link to="/cart">Shopping Cart</Link>
+          <Link to="/cart">Einkaufswagen</Link>
         </div>
 
       </div>

@@ -16,7 +16,7 @@ function HomeScreen(props) {
                         <div className="product-name">
                             <Link to={'/products/'+ product._id}>{product.name}</Link>
                         </div>
-                        <div className="product-description">{product.description}</div>
+                        {/* <div className="product-description">{product.description}</div> */}
                         <div className="product-price">{product.price}</div>
                         </div>
                     </li>)
