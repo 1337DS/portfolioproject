@@ -28,7 +28,7 @@ export default {
         },
         {
             _id:'127',
-            name: 'Secuan Sauce',
+            name: 'Szechuan Sauce',
             description: 'Sehr Lecker!',
             image: '/images/sauce.jpeg',
             price: '100$',
