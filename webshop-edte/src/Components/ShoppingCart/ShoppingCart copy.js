@@ -3,18 +3,20 @@ import data from '../../data';
 import {Link} from 'react-router-dom';
 
 function ShoppingCart(props) {
-    const productId = props.match.params.id;
+    
     const [count, setCount] = useState(0);
+    const [cart, setCart] = useState([]);
     
     React.useEffect(() => {
         const data = localStorage.getItem('Warenkorb');
         if (data) {
-        setCount(JSON.parse(data));
+        setCart(JSON.parse(data));
         }
         }, [])
-    
+    let hoverboards = cart.find(cartItem => cartItem.ID === "123");
     return <div>
-                Items in Shopping Cart:{count}
+               <h1>Items in Shopping Cart:</h1> 
+               <h1>hoverboard {hoverboards}</h1>
 
                 
                 <ul className="products-cart">

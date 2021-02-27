@@ -12,8 +12,7 @@ import { Route, Switch, BrowserRouter as Router, BrowserRouter, Link } from 'rea
 
 
 function App() {
-  const sortiment = [123,124,125,126,127,128,129,130,131,132,133,134];
-  
+    
   return (
 
     <Router>
@@ -40,9 +39,6 @@ function App() {
           <Route path="/cart" component={ShoppingCart}/>
           <Route path="/checkout" component={CheckoutPage}/>
         
-          
-
-
         </div>
       </main>
 

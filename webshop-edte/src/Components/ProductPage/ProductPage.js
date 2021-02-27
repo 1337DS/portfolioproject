@@ -1,22 +1,46 @@
-import React, { Component, useState} from 'react';
+import React, { Component, useState, push} from 'react';
 import data from '../../data';
 import {Link, Route} from 'react-router-dom';
 
 function ProductPage(props) {
     const product = data.products.find(x => x._id === props.match.params.id)
     const [count, setCount] = useState(0);
-    const [cart, setCart] = useState(0);
+    const [cart, setCart] = useState([]);
 
-    // React.useEffect(() => {
-    //                         const data = localStorage.getItem('Warenkorb');
-    //                         if (data) {
-    //                         setCount(JSON.parse(data));
-    //                         }
-    //                         }, [])
 
-    function SaveToCart(){localStorage.setItem("Warenkorb",JSON.stringify([props.match.params.id, count]))
+    React.useEffect(() => {
+                            const shoppingcart = localStorage.getItem('Warenkorb');
+                            if (shoppingcart) {
+                            setCart(JSON.parse(shoppingcart));
+                            }
+                            }, [])
 
-    }
+    function SaveToCart(){
+        let cartCopy = cart;
+
+        let ID = product._id;
+
+        const item = {'ID':product._id, 'qty':count};
+
+        let existingItem = cartCopy.find(cartItem => cartItem.ID === ID);
+       
+
+        if (existingItem) {
+            existingItem.qty += count}
+            else{
+                cartCopy.push(item)
+            }
+
+
+        setCart(cartCopy)
+        
+        localStorage.setItem("Warenkorb",JSON.stringify(cart))
+
+
+        }
+
+
+        
     
 
       return (
