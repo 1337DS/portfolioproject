@@ -8,38 +8,48 @@ function ShoppingCart(props) {
     const [cart, setCart] = useState([]);
     
     React.useEffect(() => {
-        const data = localStorage.getItem('Warenkorb');
-        if (data) {
-        setCart(JSON.parse(data));
+        const shoppingcart = localStorage.getItem('Warenkorb');
+        if (shoppingcart) {
+        setCart(JSON.parse(shoppingcart));
         }
-        }, [])
-    let hoverboards = cart.find(cartItem => cartItem.ID === "123");
+        },[])
+      
+
     return <div>
-               <h1>Items in Shopping Cart:</h1> 
-               <h1>hoverboard {hoverboards}</h1>
+                          
 
                 
                 <ul className="products-cart">
+                    <h1>Artikel im Einkaufswagen:</h1>   
                     {
-                    data.products.map(product =>             
+                    
+                    cart.map(cartproduct =>   
+                        
                     <li>
                         <div className="product">
-                        <Link to={'/products/'+ product._id}>
-                        <img className="product-image-cart" src={product.image} alt="product"></img>
+                        <Link to={'/products/'+ cartproduct.ID}>
+                        <img className="product-image-cart" src={data.products.find(x => x._id === cartproduct.ID).image} alt="product"></img>
                         </Link>
                         <div className="product-name-cart">
-                            <Link to={'/products/'+ product._id}>{product.name}</Link>
+                            <Link to={'/products/'+ cartproduct._id}>{data.products.find(x => x._id === cartproduct.ID).name}</Link>
                         </div>
                         {/* <div className="product-description">{product.description}</div> */}
-                        <div className="product-price-cart"><div>€ {product.europrice}</div>* X Stck
+                        <div className="product-price-cart"><div>€ {data.products.find(x => x._id === cartproduct.ID).europrice}</div>* {cartproduct.qty} Stck
                         
-                        <button className="button-cart" onClick={() => setCount(count + 1)}>+</button>
+                        <button className="button-cart" onClick={() => (cartproduct.qty + 1)}>+</button>
                         <button className="button-cart" onClick={() => setCount(count - 1)}>-</button> 
                         </div>
                         </div>
                     </li>)
                     }
+                    <li>
+                        <Link to={'/checkout'}>
+                            <button>Weiter zum Checkout</button>
+                        </Link>
+                    </li>
                 </ul>
+
+                
          
             </div>
             
