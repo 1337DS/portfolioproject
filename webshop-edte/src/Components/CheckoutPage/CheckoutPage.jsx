@@ -1,10 +1,20 @@
 import React, { Component, useState, setState, count, sortiment } from 'react';
-import ProductPage from '../ProductPage/ProductPage copy';
 import {Link, Route} from 'react-router-dom';
 
-function CheckoutPage(props) {
+
+class CheckoutPage extends Component {
     
-    return       <div className='checkout'>
+    ClearCart(){
+    localStorage.setItem("Warenkorb",JSON.stringify([]));
+    alert("Vielen Dank für Ihre Bestellung. Sie werden nun zur Startseite weitergeleitet.");
+    }
+    
+    render() {
+        
+   
+        return (
+            
+                  <div className='checkout'>
                  <div className="back-to-results">
                     <Link to="/cart">Zurück zum Warenkorb</Link>
                 </div>
@@ -67,14 +77,22 @@ function CheckoutPage(props) {
                         <br/> 
 
                         </li>
-                        <li> <button type="submit">
+                        <li> 
+                            <Link to="/">
+                            <button onClick={()=>{this.ClearCart()}}>  
                         Kostenpflichtig bestellen
                         </button>
+                        </Link>
                                 
                         </li>
                         
                         
 					</form>
             </div>
+
+            
+        );
+    }
 }
+
 export default CheckoutPage;

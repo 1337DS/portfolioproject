@@ -29,14 +29,17 @@ function ShoppingCart(props) {
     function CalculateTotal(){
         cartNotZero.forEach(item => cartTotal += (item.saleprice*item.qty));
     }
-    function buttonplus(){
-    CartItemsNotZero(); }
-    function buttonminus(){
+    
+    function SaveToCart(){
 
-    }
+        
+        localStorage.setItem("Warenkorb",JSON.stringify(cartNotZero))
+
+
+        }
     return <div>
             <div className="back-to-results">
-                    <Link to="/ShoppingCart">Zurück zur Produktseite</Link>
+                    <Link to="/" onClick={SaveToCart}>Zurück zur Produktseite</Link>
                 </div>
                           
 
@@ -75,7 +78,7 @@ function ShoppingCart(props) {
                     </li>
                     <li>
                         <Link to={'/checkout'}>
-                            <button>Weiter zum Checkout</button>
+                            <button onClick={SaveToCart}>Weiter zum Checkout</button>
                         </Link>
                     </li>
                 </ul>

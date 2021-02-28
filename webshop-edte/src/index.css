@@ -35,7 +35,6 @@ body{
   grid-template-rows: 10rem 1fr 5rem;
   height: 100%;   
 }
-
 .header{
   grid-area: header;
   background-color: #801100;
