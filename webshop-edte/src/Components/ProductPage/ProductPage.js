@@ -20,7 +20,7 @@ function ProductPage(props) {
 
         let ID = product._id;
 
-        const item = {'ID':product._id, 'qty':count};
+        const item = {'ID':product._id, 'qty':count, 'saleprice':product.europrice};
 
         let existingItem = cartCopy.find(cartItem => cartItem.ID === ID);
        

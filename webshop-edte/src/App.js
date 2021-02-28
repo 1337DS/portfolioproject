@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component, useState } from 'react'
 import WelcomePage from './Components/WelcomePage/WelcomePage';
-import ShoppingCart from './Components/ShoppingCart/ShoppingCart copy';
+import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
 import ProductPage from './Components/ProductPage/ProductPage';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

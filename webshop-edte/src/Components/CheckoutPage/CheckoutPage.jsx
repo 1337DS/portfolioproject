@@ -1,9 +1,13 @@
 import React, { Component, useState, setState, count, sortiment } from 'react';
 import ProductPage from '../ProductPage/ProductPage copy';
+import {Link, Route} from 'react-router-dom';
 
 function CheckoutPage(props) {
     
-    return <div className='checkout'>
+    return       <div className='checkout'>
+                 <div className="back-to-results">
+                    <Link to="/cart">Zurück zum Warenkorb</Link>
+                </div>
                 <h1>Einkauf Abschließen</h1>
                 <h1>{sortiment}</h1>
                 <form className="kontaktformular" action="https://www.edte-webshop.de/>mail.php" method="POST|GET">
